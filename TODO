@@ -1,0 +1,37 @@
+Set up:
+  - Night shift (or Flux)
+  - Backblaze
+  - Brewfile
+  - Automate desktop backgrounds
+  - Bartender
+    - Setup
+  - Alfred
+  - Hazel
+    - Setup
+
+Brewfile:
+  - Clipy
+  - Caffeine
+
+
+Figure out how to move preferences for:
+  - Transmission
+  - Flux
+  - Vscode
+
+
+Programmatically add to launch:
+  - Clipy
+  - iTerm
+  - BetterSnapTool
+  - Sip
+  - Flux
+  - Alfred
+
+
+- There were a bunch of transmission preferences...
+  https://github.com/mathiasbynens/dotfiles/blob/master/.macos#L854
+
+Considering:
+  If I want pause/play to go straight to iTunes
+  http://milgra.com/mac-media-key-forwarder.html

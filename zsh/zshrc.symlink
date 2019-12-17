@@ -1,5 +1,13 @@
+# TIME_START=$(($(gdate +%s%N) / 1000000))
+
+# local function compute_load_time () {
+#   local TIME_START=$1
+#   local TIME_END=$(($(gdate +%s%N) / 1000000))
+#   echo $((TIME_END-TIME_START))
+# }
+
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+export ZSHDOT=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Code
@@ -14,7 +22,7 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($ZSHDOT/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -48,3 +56,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# Enable to print the load time
+# compute_load_time $TIME_START
