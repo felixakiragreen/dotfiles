@@ -32,11 +32,7 @@ Set up:
     - Setup
 
 Brewfile:
-  - Clipy
-  - Caffeine
-  brew cask install background-music
-  docker :P
-
+  [ ] mas not working correctly
 
 Figure out how to move preferences for:
   - Transmission
