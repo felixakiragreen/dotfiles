@@ -35,9 +35,10 @@ Brewfile:
   [ ] mas not working correctly
 
 Figure out how to move preferences for:
-  - Transmission
-  - Flux
-  - Vscode
+  [x] Vscode
+    [x] settings.json
+    [x] keybindings.json
+    [ ] extensions
 
 
 Programmatically add to launch:
