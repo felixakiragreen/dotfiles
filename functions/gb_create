@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+gb_create() {
+  # makes checkes out new branch
+  git checkout -b $1
+  # push to origin to first time
+  git push -u origin $1
+}
