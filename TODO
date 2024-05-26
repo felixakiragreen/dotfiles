@@ -1,35 +1,3 @@
-To add:
-  System Preferences: 
-    - Screen Saver
-    https://krypted.com/mac-security/mac-setting-screen-saver-from-the-cli/
-    - Desktop backgrounds
-      - add folders
-      DSKDesktopPrefPane = {
-        UserFolderPaths = (
-            "/Users/fag/Pictures/Desktop Backgrounds",
-            "/Users/fag/Pictures/Desktop Backgrounds/Dynamic"
-          );
-      };
-      - set background
-    + Hot corner
-      + top left show desktop
-  Finder:
-    + FALSE Show warning before removing from iCloud Drive
-    - Power settings (don't go to sleep as fast)
-  Mail:
-    - internet accounts
-    - Viewing > FALSE Load remote content in messages
-
-Set up:
-  - Night shift
-  - Backblaze
-  - Brewfile
-  - Automate desktop backgrounds
-  - Bartender
-    - Setup
-  - Alfred
-  - Hazel
-    - Setup
 
 Brewfile:
   [ ] mas not working correctly
@@ -48,13 +16,3 @@ Programmatically add to launch:
   - Sip
   - Flux
   - Alfred
-
-
-- There were a bunch of transmission preferences...
-  https://github.com/mathiasbynens/dotfiles/blob/master/.macos#L854
-
-Considering:
-  If I want pause/play to go straight to iTunes
-  http://milgra.com/mac-media-key-forwarder.html
-
-  https://gedd.ski/post/favorite-tools/
