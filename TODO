@@ -1,3 +1,6 @@
+DOT modifications:
+  [ ] ignore brew when doing stuff
+  [ ] ignore the macos stuff
 
 Brewfile:
   [ ] mas not working correctly
@@ -7,12 +10,7 @@ Figure out how to move preferences for:
     [x] settings.json
     [x] keybindings.json
     [ ] extensions
+  [x] iTerm
 
-
-Programmatically add to launch:
-  - Clipy
-  - iTerm
-  - BetterSnapTool
-  - Sip
-  - Flux
-  - Alfred
+Eventually:
+  [ ] neovim
