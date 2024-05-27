@@ -59,3 +59,10 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Enable to print the load time
 # compute_load_time $TIME_START
+
+# bun completions
+[ -s "/Users/fag/.bun/_bun" ] && source "/Users/fag/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
