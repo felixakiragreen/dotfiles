@@ -11,13 +11,13 @@
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-# osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
-# sudo -v
+sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-# while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX - Global                                                      #
@@ -61,14 +61,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 defaults write -globalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-# defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-# defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-
-# Keyboard: Set a really fast key repeat.
-defaults write -globalDomain KeyRepeat -int 1
-
-# Keyboard: Disable press-and-hold for keys in favor of key repeat.
-defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
+defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
 
 # Set language and text formats
 defaults write -globalDomain AppleLanguages -array "en"
@@ -114,11 +108,11 @@ defaults write com.apple.dock minimize-to-application -bool true
 
 # Top left screen corner → Desktop
 defaults write com.apple.dock wvous-tl-corner -int 4
-defaults write com.apple.dock wvous-tl-modifier -int 1048576
+defaults write com.apple.dock wvous-tl-modifier -int 1048576 # ⌘
 
 # Bottom left screen corner → Start screen saver
 defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 1048576
+defaults write com.apple.dock wvous-bl-modifier -int 1048576 # ⌘
 
 ###############################################################################
 # Finder                                                                      #
@@ -131,7 +125,6 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
@@ -236,31 +229,3 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
-###############################################################################
-# Energy saving                                                               #
-###############################################################################
-
-# Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off > /dev/null
-
-# # Enable lid wakeup
-# sudo pmset -a lidwake 1
-
-# # Restart automatically on power loss
-# sudo pmset -a autorestart 1
-
-# # Restart automatically if the computer freezes
-# sudo systemsetup -setrestartfreeze on
-
-# # Sleep the display after 15 minutes
-# sudo pmset -a displaysleep 15
-
-# # Disable machine sleep while charging
-# sudo pmset -c sleep 0
-
-# # Set machine sleep to 5 minutes on battery
-# sudo pmset -b sleep 5
-
-# # Set standby delay to 24 hours (default is 1 hour)
-# sudo pmset -a standbydelay 86400
