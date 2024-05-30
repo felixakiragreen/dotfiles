@@ -3,12 +3,12 @@ DOT modifications:
   [ ] ignore the macos stuff
 
 Not working correctly:
-  [ ] universalaccess
-    defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
-    defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
-
-Brewfile:
-  [ ] mas not working correctly
+  macos/system.json:
+    [ ] universalaccess
+      defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
+      defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
+  Brewfile:
+    [ ] mas not working because of AppleId
 
 Figure out how to move preferences for:
   [x] Vscode
