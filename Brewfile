@@ -1,6 +1,6 @@
 tap 'homebrew/bundle'
 cask_args appdir: '/Applications'
-brew 'mas' # Mac App Store CLI
+# brew 'mas' # Mac App Store CLI
 
 # DEV
 cask 'visual-studio-code' # code editor
@@ -26,21 +26,17 @@ cask '1password' # password manager
 cask 'backblaze' # backup
 cask 'ivpn' # VPN
 cask 'maccy' # clipboard manager
-mas 'Sip', id: 507257563 # capture colors on screen
-mas 'BetterSnapTool', id: 417375580 # window manager
-mas 'The Unarchiver', id: 425424353 # archive manager
-mas 'Unclutter', id: 577085396 # organizer
+# mas 'Sip', id: 507257563 # capture colors on screen
+# mas 'BetterSnapTool', id: 417375580 # window manager
+# mas 'The Unarchiver', id: 425424353 # archive manager
+# mas 'Unclutter', id: 577085396 # organizer
 
 # Play
 
 cask 'spotify' # music
 cask 'iina' # video player
-mas 'Affinity Photo 2', id: 1616822987
-mas 'Affinity Designer 2', id: 1616831348
-mas 'Affinity Publisher 2', id: 1606941598
+# mas 'Affinity Photo 2', id: 1616822987
+# mas 'Affinity Designer 2', id: 1616831348
+# mas 'Affinity Publisher 2', id: 1606941598
 
 # QuickLook
-
-cask 'qlimagesize' # QuickLook image info
-cask 'qlstephen' # QuickLook plain text no extension
-cask 'qlvideo' # QuickLook video
