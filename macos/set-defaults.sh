@@ -40,6 +40,13 @@ defaults write -globalDomain NSTableViewDefaultSizeMode -int 2
 # Set scrollbar visibility (`WhenScrolling`, `Automatic` and `Always`)
 defaults write -globalDomain AppleShowScrollBars -string "WhenScrolling"
 
+# Set keyboard repeat to on
+defaults write NSGlobalDomain KeyRepeat -bool true
+# Set keyboard repeat delay to 100ms
+defaults write com.apple.Accessibility KeyRepeatDelay -float 0.1
+# Set keyboard repeat interval to 1ms
+defaults write com.apple.Accessibility KeyRepeatInterval -float 0.001
+
 # Close windows when quiting an app
 # We do this to enable: https://www.iterm2.com/documentation-restoration.html
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool true
@@ -61,8 +68,8 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 defaults write -globalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
-defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
+sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
+sudo defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
 
 # Set language and text formats
 defaults write -globalDomain AppleLanguages -array "en"
