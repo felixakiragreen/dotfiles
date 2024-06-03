@@ -7,6 +7,7 @@ brew 'mas' # Mac App Store CLI
 cask 'visual-studio-code' # code editor
 cask 'zed' # code editor
 cask 'iterm2' # terminal
+brew 'spaceship' # zsh theme
 brew 'git' # version control
 brew 'elixir' # programing language
 brew 'node' # programing language
