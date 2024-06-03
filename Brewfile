@@ -18,6 +18,7 @@ brew 'bun' # JS bundler
 
 # UTILITY
 
+cask 'arc' # browser
 cask 'brave-browser@dev' # browser
 cask 'google-chrome' # browser
 cask 'raycast' # launcher
