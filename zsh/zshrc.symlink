@@ -61,7 +61,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # compute_load_time $TIME_START
 
 # bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
