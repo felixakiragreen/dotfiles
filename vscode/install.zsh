@@ -13,19 +13,15 @@ for file in "${vscode_files[@]}"; do
 	dest="$VSCODE_APP/$file"
 	backup="$dest.backup"
 
-	# backup the existing file, if it exists
-	if [ -f "$dest" ]; then
+	# backup the existing file, unless it is a symlink
+	if [ -f "$dest" ] && [ ! -L "$dest" ]; then
 		echo "Backing up $dest to $backup"
 		mv "$dest" "$backup"
 	fi
 
-	# remove the existing symlink, if it exists
-	if [ -L "$dest" ]; then
-		echo "Removing symlink $dest"
-		rm "$dest"
+	# if there is not a symlink, create one
+	if [ ! -L "$dest" ]; then
+		echo "Creating symlink $dest"
+		ln -s "$src" "$dest"
 	fi
-
-	# create the symlink
-	echo "Creating symlink $dest"
-	ln -s "$src" "$dest"
 done
