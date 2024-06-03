@@ -14,7 +14,7 @@ brew 'openssl' # SSL/TLS cryptography library
 brew 'postgresql@16' # database
 cask 'orbstack' # docker replacement
 tap 'oven-sh/bun' 
-brew 'bun' # JS bundler
+cask 'bun' # JS bundler
 
 # UTILITY
 
