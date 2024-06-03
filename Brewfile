@@ -12,7 +12,7 @@ brew 'elixir' # programing language
 brew 'node' # programing language
 brew 'openssl' # SSL/TLS cryptography library
 brew 'postgresql@16' # database
-brew 'orbstack' # docker replacement
+cask 'orbstack' # docker replacement
 tap 'oven-sh/bun' 
 brew 'bun' # JS bundler
 
