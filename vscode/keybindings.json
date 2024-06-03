@@ -1,0 +1,17 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+	{
+		"key": "cmd+r",
+		"command": "workbench.action.reloadWindow"
+	},
+	{
+		"key": "ctrl+alt+`",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	}
+]
