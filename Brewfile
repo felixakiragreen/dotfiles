@@ -1,5 +1,4 @@
 tap 'homebrew/bundle'
-tap 'homebrew/cask-versions'
 cask_args appdir: '/Applications'
 brew 'mas' # Mac App Store CLI
 
