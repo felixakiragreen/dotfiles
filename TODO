@@ -5,11 +5,15 @@ DOT modifications:
 Not working correctly:
   [ ] oh-my-zsh install
   macos/system.json:
-    [ ] universalaccess
+    [x] universalaccess
       defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
       defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
+  oh-my-zsh/install.sh:
+    [ ] produces error: 
+      ln: /themes/spaceship.zsh-theme: No such file or directory
   Brewfile:
     [ ] mas not working because of AppleId
+    [ ] don't try to install/overwrite any apps if they already exist
 
 Figure out how to move preferences for:
   [x] Vscode
