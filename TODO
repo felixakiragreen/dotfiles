@@ -3,7 +3,7 @@ DOT modifications:
   [ ] ignore the macos stuff
 
 Not working correctly:
-  [ ] oh-my-zsh install
+  [ ] fast keyboard repeat isn't working on new computer
   macos/system.json:
     [x] universalaccess
       defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
@@ -14,6 +14,7 @@ Not working correctly:
   Brewfile:
     [ ] mas not working because of AppleId
     [ ] don't try to install/overwrite any apps if they already exist
+    []
 
 Figure out how to move preferences for:
   [x] Vscode
