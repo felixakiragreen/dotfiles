@@ -3,6 +3,7 @@ DOT modifications:
   [ ] ignore the macos stuff
 
 Not working correctly:
+  [ ] oh-my-zsh install
   macos/system.json:
     [ ] universalaccess
       defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
