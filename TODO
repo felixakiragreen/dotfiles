@@ -1,27 +1,29 @@
 DOT modifications:
-  [ ] ignore brew when doing stuff
-  [ ] ignore the macos stuff
+	[ ] ignore brew when doing stuff
+	[ ] ignore the macos stuff
 
 Not working correctly:
-  [ ] fast keyboard repeat isn't working on new computer
-  macos/system.json:
-    [x] universalaccess
-      defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
-      defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
-  oh-my-zsh/install.sh:
-    [ ] produces error: 
-      ln: /themes/spaceship.zsh-theme: No such file or directory
-  Brewfile:
-    [ ] mas not working because of AppleId
-    [ ] don't try to install/overwrite any apps if they already exist
-    []
+	[ ] fast keyboard repeat isn't working on new computer
+	macos/system.json:
+		[x] universalaccess
+			defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true # enable
+			defaults write com.apple.universalaccess closeViewScrollWheelModifiersInt -int 262144 # set to ^
+		[ ] auto lock isn't working
+		[ ] screensaver trigger in bottom left corner not working
+	oh-my-zsh/install.sh:
+		[ ] produces error: 
+			ln: /themes/spaceship.zsh-theme: No such file or directory
+	Brewfile:
+		[ ] mas not working because of AppleId
+		[ ] don't try to install/overwrite any apps if they already exist
+		[]
 
 Figure out how to move preferences for:
-  [x] Vscode
-    [x] settings.json
-    [x] keybindings.json
-    [ ] extensions
-  [x] iTerm
+	[x] Vscode
+		[x] settings.json
+		[x] keybindings.json
+		[ ] extensions
+	[x] iTerm
 
 Eventually:
-  [ ] neovim
+	[ ] neovim
