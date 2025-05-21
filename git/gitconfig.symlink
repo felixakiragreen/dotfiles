@@ -41,3 +41,7 @@
 [user]
 	name = Felix Green
 	email = work@felix.green
+[init]
+	defaultBranch = master
+#[url "/Volumes/git/"]
+#  insteadOf = /mnt/g/
