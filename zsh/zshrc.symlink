@@ -1,10 +1,10 @@
-# TIME_START=$(($(gdate +%s%N) / 1000000))
+TIME_START=$(($(gdate +%s%N) / 1000000))
 
-# local function compute_load_time () {
-#   local TIME_START=$1
-#   local TIME_END=$(($(gdate +%s%N) / 1000000))
-#   echo $((TIME_END-TIME_START))
-# }
+local function compute_load_time () {
+	local TIME_START=$1
+	local TIME_END=$(($(gdate +%s%N) / 1000000))
+	echo "Reloaded in $((TIME_END-TIME_START)) ms"
+}
 
 # shortcut to this dotfiles path is $ZSH
 export ZSHDOT=$HOME/.dotfiles
@@ -17,7 +17,7 @@ export PROJECTS=~/code
 # you'll have access to them in your scripts.
 if [[ -a ~/.localrc ]]
 then
-  source ~/.localrc
+	source ~/.localrc
 fi
 
 # all of our zsh files
@@ -27,13 +27,13 @@ config_files=($ZSHDOT/**/*.zsh)
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
-  source $file
+	source $file
 done
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
-  source $file
+	source $file
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
@@ -43,7 +43,7 @@ compinit
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
-  source $file
+	source $file
 done
 
 unset config_files
@@ -58,7 +58,7 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 # Enable to print the load time
-# compute_load_time $TIME_START
+compute_load_time $TIME_START
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -66,3 +66,9 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Created by `pipx` on 2024-08-20 14:00:02
+export PATH="$PATH:/Users/felix/.local/bin"
+
+# add latex to PATH
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-darwin"

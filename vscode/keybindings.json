@@ -25,5 +25,10 @@
 				"editor.action.detectIndentation"
 			]
 		}
-	}
+	},
+	{
+		"key": "ctrl+shift+=",
+		"command": "workbench.action.navigateForward",
+		"when": "canNavigateForward"
+	},
 ]

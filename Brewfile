@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 # brew 'mas' # Mac App Store CLI
 
 # DEV
+brew 'core-utils' # common GNU utilities like gdate
 cask 'visual-studio-code' # code editor
 cask 'zed' # code editor
 cask 'iterm2' # terminal
@@ -26,6 +27,8 @@ cask '1password' # password manager
 cask 'backblaze' # backup
 cask 'ivpn' # VPN
 cask 'maccy' # clipboard manager
+cask 'rectangle'
+cask 'linearmouse'
 # mas 'Sip', id: 507257563 # capture colors on screen
 # mas 'BetterSnapTool', id: 417375580 # window manager
 # mas 'The Unarchiver', id: 425424353 # archive manager
