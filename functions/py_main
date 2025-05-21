@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# This function calls py_run with the main.py script
+py_main() {
+	py_run main.py "$@"
+}

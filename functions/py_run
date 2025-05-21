@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Run Python scripts in a virtual environment
+# Usage: pyrun <script.py> [args]
+# This script creates a virtual environment if it doesn't exist, activates it,
+# and runs the specified Python script with any provided arguments.
+py_run() {
+	(
+		if [ ! -d myenv ]; then
+			python3 -m venv myenv
+			source myenv/bin/activate
+			pip install --upgrade pip
+			[ -f requirements.txt ] && pip install -r requirements.txt
+		else
+			source myenv/bin/activate
+			[ -f requirements.txt ] && pip install -r requirements.txt
+		fi
+		python3 "$@"
+	)
+}
